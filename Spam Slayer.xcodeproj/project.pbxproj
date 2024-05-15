@@ -1,0 +1,998 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F90F45422BF3E79700B61650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A6FDFA2BF0DEBC006C4E07 /* Assets.xcassets */; };
+		F90F45F82BF3E89300B61650 /* stopword_2.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F45F42BF3E89300B61650 /* stopword_2.txt */; };
+		F90F45F92BF3E89300B61650 /* sms_3.csv in Resources */ = {isa = PBXBuildFile; fileRef = F90F45F52BF3E89300B61650 /* sms_3.csv */; };
+		F90F45FA2BF3E89300B61650 /* sms_3_validation.csv in Resources */ = {isa = PBXBuildFile; fileRef = F90F45F62BF3E89300B61650 /* sms_3_validation.csv */; };
+		F90F45FB2BF3E89300B61650 /* stopword_1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F45F72BF3E89300B61650 /* stopword_1.txt */; };
+		F90F46032BF3E8AE00B61650 /* ad_combined.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F45FC2BF3E8AE00B61650 /* ad_combined.txt */; };
+		F90F46042BF3E8AE00B61650 /* text.sms_3.label1.part2.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F45FD2BF3E8AE00B61650 /* text.sms_3.label1.part2.txt */; };
+		F90F46052BF3E8AE00B61650 /* text.sms_3.label0.part2.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F45FE2BF3E8AE00B61650 /* text.sms_3.label0.part2.txt */; };
+		F90F46062BF3E8AE00B61650 /* il_combined.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F45FF2BF3E8AE00B61650 /* il_combined.txt */; };
+		F90F46072BF3E8AE00B61650 /* text.sms_3.label1.part1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F46002BF3E8AE00B61650 /* text.sms_3.label1.part1.txt */; };
+		F90F46082BF3E8AE00B61650 /* fr_combined.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F46012BF3E8AE00B61650 /* fr_combined.txt */; };
+		F90F46092BF3E8AE00B61650 /* text.sms_3.label0.part1.txt in Resources */ = {isa = PBXBuildFile; fileRef = F90F46022BF3E8AE00B61650 /* text.sms_3.label0.part1.txt */; };
+		F988AC202BF3438000111F5D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988AC1F2BF3438000111F5D /* ContentView.swift */; };
+		F988ACC72BF3D7F000111F5D /* Bayes2Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = F988ACC62BF3D7F000111F5D /* Bayes2Controller.swift */; };
+		F9A6FDF52BF0DEBC006C4E07 /* Spam_SlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FDF42BF0DEBC006C4E07 /* Spam_SlayerApp.swift */; };
+		F9A6FDFF2BF0DEBC006C4E07 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9A6FDFE2BF0DEBC006C4E07 /* Preview Assets.xcassets */; };
+		F9A6FE092BF0DEBD006C4E07 /* Spam_SlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE082BF0DEBD006C4E07 /* Spam_SlayerTests.swift */; };
+		F9A6FE132BF0DEBD006C4E07 /* Spam_SlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE122BF0DEBD006C4E07 /* Spam_SlayerUITests.swift */; };
+		F9A6FE152BF0DEBD006C4E07 /* Spam_SlayerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE142BF0DEBD006C4E07 /* Spam_SlayerUITestsLaunchTests.swift */; };
+		F9A6FE3A2BF0EED7006C4E07 /* BayesianClassifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE352BF0EED4006C4E07 /* BayesianClassifier.swift */; };
+		F9A6FE3B2BF0EED7006C4E07 /* EventSpace.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE362BF0EED5006C4E07 /* EventSpace.swift */; };
+		F9A6FE3C2BF0EED7006C4E07 /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE372BF0EED6006C4E07 /* Math.swift */; };
+		F9A6FE3D2BF0EED7006C4E07 /* HashableTuple.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE382BF0EED6006C4E07 /* HashableTuple.swift */; };
+		F9A6FE3E2BF0EED7006C4E07 /* IncrementingBag.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE392BF0EED7006C4E07 /* IncrementingBag.swift */; };
+		F9A6FE402BF0EF91006C4E07 /* BayesController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A6FE3F2BF0EF91006C4E07 /* BayesController.swift */; };
+		F9E204D32BF4F5F500029889 /* MaxEntropy1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F9E204D22BF4F5F500029889 /* MaxEntropy1.mlmodel */; };
+		F9E204D52BF4F62200029889 /* MaxEntropy2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F9E204D42BF4F62200029889 /* MaxEntropy2.mlmodel */; };
+		F9E204D72BF4F69400029889 /* BRET2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F9E204D62BF4F69400029889 /* BRET2.mlmodel */; };
+		F9E204DA2BF517C100029889 /* modelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E204D92BF517C100029889 /* modelController.swift */; };
+		F9E204DC2BF51A1100029889 /* GlobalErrorHandlerModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E204DB2BF51A1100029889 /* GlobalErrorHandlerModifier.swift */; };
+		F9E204F72BF520CA00029889 /* MessageFilterExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E204F62BF520CA00029889 /* MessageFilterExtension.swift */; };
+		F9E204FB2BF520CA00029889 /* Spam-Slayer-SMS-Filter.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F9E204F42BF520CA00029889 /* Spam-Slayer-SMS-Filter.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F9E205022BF5285500029889 /* classifier2-1.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E204FF2BF5285400029889 /* classifier2-1.json */; };
+		F9E205032BF5285500029889 /* classifier2-2.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E205002BF5285500029889 /* classifier2-2.json */; };
+		F9E205042BF5285500029889 /* classifier.json in Resources */ = {isa = PBXBuildFile; fileRef = F9E205012BF5285500029889 /* classifier.json */; };
+		F9E205052BF52BEC00029889 /* MaxEntropy2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F9E204D42BF4F62200029889 /* MaxEntropy2.mlmodel */; };
+		F9E205062BF52BEC00029889 /* MaxEntropy1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = F9E204D22BF4F5F500029889 /* MaxEntropy1.mlmodel */; };
+		F9E205072BF52C1800029889 /* modelController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9E204D92BF517C100029889 /* modelController.swift */; };
+		F9F013A32BF0F5BA00136C3D /* SwiftCSV in Frameworks */ = {isa = PBXBuildFile; productRef = F9F013A22BF0F5BA00136C3D /* SwiftCSV */; };
+		F9F013AA2BF33A2000136C3D /* ThisKit in Frameworks */ = {isa = PBXBuildFile; productRef = F9F013A92BF33A2000136C3D /* ThisKit */; };
+		F9F013AD2BF33CA600136C3D /* AlertToast in Frameworks */ = {isa = PBXBuildFile; productRef = F9F013AC2BF33CA600136C3D /* AlertToast */; };
+		F9F013B42BF33F3700136C3D /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9F013B32BF33F3700136C3D /* Settings.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F9A6FE052BF0DEBD006C4E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A6FDE92BF0DEBB006C4E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A6FDF02BF0DEBC006C4E07;
+			remoteInfo = "Spam Slayer";
+		};
+		F9A6FE0F2BF0DEBD006C4E07 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A6FDE92BF0DEBB006C4E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9A6FDF02BF0DEBC006C4E07;
+			remoteInfo = "Spam Slayer";
+		};
+		F9E204F92BF520CA00029889 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F9A6FDE92BF0DEBB006C4E07 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F9E204F32BF520CA00029889;
+			remoteInfo = "Spam-Slayer-SMS-Filter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F9E204E82BF51BA300029889 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F9E204FB2BF520CA00029889 /* Spam-Slayer-SMS-Filter.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F90F45F42BF3E89300B61650 /* stopword_2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = stopword_2.txt; sourceTree = "<group>"; };
+		F90F45F52BF3E89300B61650 /* sms_3.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = sms_3.csv; sourceTree = "<group>"; };
+		F90F45F62BF3E89300B61650 /* sms_3_validation.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = sms_3_validation.csv; sourceTree = "<group>"; };
+		F90F45F72BF3E89300B61650 /* stopword_1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = stopword_1.txt; sourceTree = "<group>"; };
+		F90F45FC2BF3E8AE00B61650 /* ad_combined.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ad_combined.txt; sourceTree = "<group>"; };
+		F90F45FD2BF3E8AE00B61650 /* text.sms_3.label1.part2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.sms_3.label1.part2.txt; sourceTree = "<group>"; };
+		F90F45FE2BF3E8AE00B61650 /* text.sms_3.label0.part2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.sms_3.label0.part2.txt; sourceTree = "<group>"; };
+		F90F45FF2BF3E8AE00B61650 /* il_combined.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = il_combined.txt; sourceTree = "<group>"; };
+		F90F46002BF3E8AE00B61650 /* text.sms_3.label1.part1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.sms_3.label1.part1.txt; sourceTree = "<group>"; };
+		F90F46012BF3E8AE00B61650 /* fr_combined.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = fr_combined.txt; sourceTree = "<group>"; };
+		F90F46022BF3E8AE00B61650 /* text.sms_3.label0.part1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = text.sms_3.label0.part1.txt; sourceTree = "<group>"; };
+		F988AC1F2BF3438000111F5D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F988ACC62BF3D7F000111F5D /* Bayes2Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bayes2Controller.swift; sourceTree = "<group>"; };
+		F9A6FDF12BF0DEBC006C4E07 /* Spam Slayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spam Slayer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A6FDF42BF0DEBC006C4E07 /* Spam_SlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spam_SlayerApp.swift; sourceTree = "<group>"; };
+		F9A6FDFA2BF0DEBC006C4E07 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9A6FDFC2BF0DEBC006C4E07 /* Spam_Slayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spam_Slayer.entitlements; sourceTree = "<group>"; };
+		F9A6FDFE2BF0DEBC006C4E07 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F9A6FE042BF0DEBD006C4E07 /* Spam SlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spam SlayerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A6FE082BF0DEBD006C4E07 /* Spam_SlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spam_SlayerTests.swift; sourceTree = "<group>"; };
+		F9A6FE0E2BF0DEBD006C4E07 /* Spam SlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Spam SlayerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9A6FE122BF0DEBD006C4E07 /* Spam_SlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spam_SlayerUITests.swift; sourceTree = "<group>"; };
+		F9A6FE142BF0DEBD006C4E07 /* Spam_SlayerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spam_SlayerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		F9A6FE352BF0EED4006C4E07 /* BayesianClassifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BayesianClassifier.swift; sourceTree = "<group>"; };
+		F9A6FE362BF0EED5006C4E07 /* EventSpace.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventSpace.swift; sourceTree = "<group>"; };
+		F9A6FE372BF0EED6006C4E07 /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		F9A6FE382BF0EED6006C4E07 /* HashableTuple.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashableTuple.swift; sourceTree = "<group>"; };
+		F9A6FE392BF0EED7006C4E07 /* IncrementingBag.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IncrementingBag.swift; sourceTree = "<group>"; };
+		F9A6FE3F2BF0EF91006C4E07 /* BayesController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BayesController.swift; sourceTree = "<group>"; };
+		F9E204D22BF4F5F500029889 /* MaxEntropy1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MaxEntropy1.mlmodel; sourceTree = "<group>"; };
+		F9E204D42BF4F62200029889 /* MaxEntropy2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = MaxEntropy2.mlmodel; sourceTree = "<group>"; };
+		F9E204D62BF4F69400029889 /* BRET2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = BRET2.mlmodel; sourceTree = "<group>"; };
+		F9E204D92BF517C100029889 /* modelController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modelController.swift; sourceTree = "<group>"; };
+		F9E204DB2BF51A1100029889 /* GlobalErrorHandlerModifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalErrorHandlerModifier.swift; sourceTree = "<group>"; };
+		F9E204F42BF520CA00029889 /* Spam-Slayer-SMS-Filter.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Spam-Slayer-SMS-Filter.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9E204F62BF520CA00029889 /* MessageFilterExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFilterExtension.swift; sourceTree = "<group>"; };
+		F9E204F82BF520CA00029889 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9E204FF2BF5285400029889 /* classifier2-1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "classifier2-1.json"; sourceTree = "<group>"; };
+		F9E205002BF5285500029889 /* classifier2-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "classifier2-2.json"; sourceTree = "<group>"; };
+		F9E205012BF5285500029889 /* classifier.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = classifier.json; sourceTree = "<group>"; };
+		F9F013B32BF33F3700136C3D /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F9A6FDEE2BF0DEBC006C4E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9F013AD2BF33CA600136C3D /* AlertToast in Frameworks */,
+				F9F013A32BF0F5BA00136C3D /* SwiftCSV in Frameworks */,
+				F9F013AA2BF33A2000136C3D /* ThisKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A6FE012BF0DEBD006C4E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A6FE0B2BF0DEBD006C4E07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E204F12BF520CA00029889 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F90F460A2BF3E8B600B61650 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				F90F45FE2BF3E8AE00B61650 /* text.sms_3.label0.part2.txt */,
+				F90F45F62BF3E89300B61650 /* sms_3_validation.csv */,
+				F90F46022BF3E8AE00B61650 /* text.sms_3.label0.part1.txt */,
+				F90F45FF2BF3E8AE00B61650 /* il_combined.txt */,
+				F90F45FC2BF3E8AE00B61650 /* ad_combined.txt */,
+				F90F46012BF3E8AE00B61650 /* fr_combined.txt */,
+				F90F45F72BF3E89300B61650 /* stopword_1.txt */,
+				F90F46002BF3E8AE00B61650 /* text.sms_3.label1.part1.txt */,
+				F90F45FD2BF3E8AE00B61650 /* text.sms_3.label1.part2.txt */,
+				F90F45F42BF3E89300B61650 /* stopword_2.txt */,
+				F90F45F52BF3E89300B61650 /* sms_3.csv */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		F988ACC82BF3D80B00111F5D /* bayesController */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6FE3F2BF0EF91006C4E07 /* BayesController.swift */,
+				F988ACC62BF3D7F000111F5D /* Bayes2Controller.swift */,
+			);
+			path = bayesController;
+			sourceTree = "<group>";
+		};
+		F9A6FDE82BF0DEBB006C4E07 = {
+			isa = PBXGroup;
+			children = (
+				F9E204D12BF4F5EA00029889 /* model */,
+				F90F460A2BF3E8B600B61650 /* data */,
+				F9A6FDF32BF0DEBC006C4E07 /* Spam Slayer */,
+				F9A6FE072BF0DEBD006C4E07 /* Spam SlayerTests */,
+				F9A6FE112BF0DEBD006C4E07 /* Spam SlayerUITests */,
+				F9E204F52BF520CA00029889 /* Spam-Slayer-SMS-Filter */,
+				F9A6FDF22BF0DEBC006C4E07 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F9A6FDF22BF0DEBC006C4E07 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6FDF12BF0DEBC006C4E07 /* Spam Slayer.app */,
+				F9A6FE042BF0DEBD006C4E07 /* Spam SlayerTests.xctest */,
+				F9A6FE0E2BF0DEBD006C4E07 /* Spam SlayerUITests.xctest */,
+				F9E204F42BF520CA00029889 /* Spam-Slayer-SMS-Filter.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F9A6FDF32BF0DEBC006C4E07 /* Spam Slayer */ = {
+			isa = PBXGroup;
+			children = (
+				F9E204D82BF517AA00029889 /* modelController */,
+				F988ACC82BF3D80B00111F5D /* bayesController */,
+				F9F013B02BF33EF600136C3D /* settings */,
+				F9A6FE212BF0DF39006C4E07 /* bayes */,
+				F9A6FDF42BF0DEBC006C4E07 /* Spam_SlayerApp.swift */,
+				F988AC1F2BF3438000111F5D /* ContentView.swift */,
+				F9E204DB2BF51A1100029889 /* GlobalErrorHandlerModifier.swift */,
+				F9A6FDFA2BF0DEBC006C4E07 /* Assets.xcassets */,
+				F9A6FDFC2BF0DEBC006C4E07 /* Spam_Slayer.entitlements */,
+				F9A6FDFD2BF0DEBC006C4E07 /* Preview Content */,
+			);
+			path = "Spam Slayer";
+			sourceTree = "<group>";
+		};
+		F9A6FDFD2BF0DEBC006C4E07 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6FDFE2BF0DEBC006C4E07 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F9A6FE072BF0DEBD006C4E07 /* Spam SlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6FE082BF0DEBD006C4E07 /* Spam_SlayerTests.swift */,
+			);
+			path = "Spam SlayerTests";
+			sourceTree = "<group>";
+		};
+		F9A6FE112BF0DEBD006C4E07 /* Spam SlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6FE122BF0DEBD006C4E07 /* Spam_SlayerUITests.swift */,
+				F9A6FE142BF0DEBD006C4E07 /* Spam_SlayerUITestsLaunchTests.swift */,
+			);
+			path = "Spam SlayerUITests";
+			sourceTree = "<group>";
+		};
+		F9A6FE212BF0DF39006C4E07 /* bayes */ = {
+			isa = PBXGroup;
+			children = (
+				F9A6FE352BF0EED4006C4E07 /* BayesianClassifier.swift */,
+				F9A6FE362BF0EED5006C4E07 /* EventSpace.swift */,
+				F9A6FE382BF0EED6006C4E07 /* HashableTuple.swift */,
+				F9A6FE392BF0EED7006C4E07 /* IncrementingBag.swift */,
+				F9A6FE372BF0EED6006C4E07 /* Math.swift */,
+			);
+			path = bayes;
+			sourceTree = "<group>";
+		};
+		F9E204D12BF4F5EA00029889 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				F9E204D62BF4F69400029889 /* BRET2.mlmodel */,
+				F9E204D42BF4F62200029889 /* MaxEntropy2.mlmodel */,
+				F9E204D22BF4F5F500029889 /* MaxEntropy1.mlmodel */,
+				F9E205012BF5285500029889 /* classifier.json */,
+				F9E204FF2BF5285400029889 /* classifier2-1.json */,
+				F9E205002BF5285500029889 /* classifier2-2.json */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		F9E204D82BF517AA00029889 /* modelController */ = {
+			isa = PBXGroup;
+			children = (
+				F9E204D92BF517C100029889 /* modelController.swift */,
+			);
+			path = modelController;
+			sourceTree = "<group>";
+		};
+		F9E204F52BF520CA00029889 /* Spam-Slayer-SMS-Filter */ = {
+			isa = PBXGroup;
+			children = (
+				F9E204F62BF520CA00029889 /* MessageFilterExtension.swift */,
+				F9E204F82BF520CA00029889 /* Info.plist */,
+			);
+			path = "Spam-Slayer-SMS-Filter";
+			sourceTree = "<group>";
+		};
+		F9F013B02BF33EF600136C3D /* settings */ = {
+			isa = PBXGroup;
+			children = (
+				F9F013B32BF33F3700136C3D /* Settings.swift */,
+			);
+			path = settings;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F9A6FDF02BF0DEBC006C4E07 /* Spam Slayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9A6FE182BF0DEBD006C4E07 /* Build configuration list for PBXNativeTarget "Spam Slayer" */;
+			buildPhases = (
+				F9A6FDED2BF0DEBC006C4E07 /* Sources */,
+				F9A6FDEE2BF0DEBC006C4E07 /* Frameworks */,
+				F9A6FDEF2BF0DEBC006C4E07 /* Resources */,
+				F9E204E82BF51BA300029889 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9E204FA2BF520CA00029889 /* PBXTargetDependency */,
+			);
+			name = "Spam Slayer";
+			packageProductDependencies = (
+				F9F013A22BF0F5BA00136C3D /* SwiftCSV */,
+				F9F013A92BF33A2000136C3D /* ThisKit */,
+				F9F013AC2BF33CA600136C3D /* AlertToast */,
+			);
+			productName = "Spam Slayer";
+			productReference = F9A6FDF12BF0DEBC006C4E07 /* Spam Slayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F9A6FE032BF0DEBD006C4E07 /* Spam SlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9A6FE1B2BF0DEBD006C4E07 /* Build configuration list for PBXNativeTarget "Spam SlayerTests" */;
+			buildPhases = (
+				F9A6FE002BF0DEBD006C4E07 /* Sources */,
+				F9A6FE012BF0DEBD006C4E07 /* Frameworks */,
+				F9A6FE022BF0DEBD006C4E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9A6FE062BF0DEBD006C4E07 /* PBXTargetDependency */,
+			);
+			name = "Spam SlayerTests";
+			productName = "Spam SlayerTests";
+			productReference = F9A6FE042BF0DEBD006C4E07 /* Spam SlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F9A6FE0D2BF0DEBD006C4E07 /* Spam SlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9A6FE1E2BF0DEBD006C4E07 /* Build configuration list for PBXNativeTarget "Spam SlayerUITests" */;
+			buildPhases = (
+				F9A6FE0A2BF0DEBD006C4E07 /* Sources */,
+				F9A6FE0B2BF0DEBD006C4E07 /* Frameworks */,
+				F9A6FE0C2BF0DEBD006C4E07 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F9A6FE102BF0DEBD006C4E07 /* PBXTargetDependency */,
+			);
+			name = "Spam SlayerUITests";
+			productName = "Spam SlayerUITests";
+			productReference = F9A6FE0E2BF0DEBD006C4E07 /* Spam SlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		F9E204F32BF520CA00029889 /* Spam-Slayer-SMS-Filter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F9E204FC2BF520CA00029889 /* Build configuration list for PBXNativeTarget "Spam-Slayer-SMS-Filter" */;
+			buildPhases = (
+				F9E204F02BF520CA00029889 /* Sources */,
+				F9E204F12BF520CA00029889 /* Frameworks */,
+				F9E204F22BF520CA00029889 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Spam-Slayer-SMS-Filter";
+			productName = "Spam-Slayer-SMS-Filter";
+			productReference = F9E204F42BF520CA00029889 /* Spam-Slayer-SMS-Filter.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F9A6FDE92BF0DEBB006C4E07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					F9A6FDF02BF0DEBC006C4E07 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					F9A6FE032BF0DEBD006C4E07 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F9A6FDF02BF0DEBC006C4E07;
+					};
+					F9A6FE0D2BF0DEBD006C4E07 = {
+						CreatedOnToolsVersion = 15.4;
+						TestTargetID = F9A6FDF02BF0DEBC006C4E07;
+					};
+					F9E204F32BF520CA00029889 = {
+						CreatedOnToolsVersion = 15.4;
+					};
+				};
+			};
+			buildConfigurationList = F9A6FDEC2BF0DEBB006C4E07 /* Build configuration list for PBXProject "Spam Slayer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F9A6FDE82BF0DEBB006C4E07;
+			packageReferences = (
+				F9F013A12BF0F5BA00136C3D /* XCRemoteSwiftPackageReference "SwiftCSV" */,
+				F9F013A82BF33A2000136C3D /* XCRemoteSwiftPackageReference "ThisKit" */,
+				F9F013AB2BF33CA600136C3D /* XCRemoteSwiftPackageReference "AlertToast" */,
+			);
+			productRefGroup = F9A6FDF22BF0DEBC006C4E07 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F9A6FDF02BF0DEBC006C4E07 /* Spam Slayer */,
+				F9A6FE032BF0DEBD006C4E07 /* Spam SlayerTests */,
+				F9A6FE0D2BF0DEBD006C4E07 /* Spam SlayerUITests */,
+				F9E204F32BF520CA00029889 /* Spam-Slayer-SMS-Filter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F9A6FDEF2BF0DEBC006C4E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90F45F82BF3E89300B61650 /* stopword_2.txt in Resources */,
+				F9E205032BF5285500029889 /* classifier2-2.json in Resources */,
+				F90F45F92BF3E89300B61650 /* sms_3.csv in Resources */,
+				F90F45FA2BF3E89300B61650 /* sms_3_validation.csv in Resources */,
+				F9E205022BF5285500029889 /* classifier2-1.json in Resources */,
+				F90F45FB2BF3E89300B61650 /* stopword_1.txt in Resources */,
+				F90F46032BF3E8AE00B61650 /* ad_combined.txt in Resources */,
+				F90F46042BF3E8AE00B61650 /* text.sms_3.label1.part2.txt in Resources */,
+				F90F46052BF3E8AE00B61650 /* text.sms_3.label0.part2.txt in Resources */,
+				F90F46062BF3E8AE00B61650 /* il_combined.txt in Resources */,
+				F90F46072BF3E8AE00B61650 /* text.sms_3.label1.part1.txt in Resources */,
+				F90F46082BF3E8AE00B61650 /* fr_combined.txt in Resources */,
+				F9E205042BF5285500029889 /* classifier.json in Resources */,
+				F90F46092BF3E8AE00B61650 /* text.sms_3.label0.part1.txt in Resources */,
+				F90F45422BF3E79700B61650 /* Assets.xcassets in Resources */,
+				F9A6FDFF2BF0DEBC006C4E07 /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A6FE022BF0DEBD006C4E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A6FE0C2BF0DEBD006C4E07 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E204F22BF520CA00029889 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F9A6FDED2BF0DEBC006C4E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E204D72BF4F69400029889 /* BRET2.mlmodel in Sources */,
+				F9E204D52BF4F62200029889 /* MaxEntropy2.mlmodel in Sources */,
+				F9E204D32BF4F5F500029889 /* MaxEntropy1.mlmodel in Sources */,
+				F9A6FE3B2BF0EED7006C4E07 /* EventSpace.swift in Sources */,
+				F9A6FE3D2BF0EED7006C4E07 /* HashableTuple.swift in Sources */,
+				F9A6FE3A2BF0EED7006C4E07 /* BayesianClassifier.swift in Sources */,
+				F9A6FE402BF0EF91006C4E07 /* BayesController.swift in Sources */,
+				F9A6FE3E2BF0EED7006C4E07 /* IncrementingBag.swift in Sources */,
+				F988AC202BF3438000111F5D /* ContentView.swift in Sources */,
+				F9A6FDF52BF0DEBC006C4E07 /* Spam_SlayerApp.swift in Sources */,
+				F988ACC72BF3D7F000111F5D /* Bayes2Controller.swift in Sources */,
+				F9F013B42BF33F3700136C3D /* Settings.swift in Sources */,
+				F9A6FE3C2BF0EED7006C4E07 /* Math.swift in Sources */,
+				F9E204DC2BF51A1100029889 /* GlobalErrorHandlerModifier.swift in Sources */,
+				F9E204DA2BF517C100029889 /* modelController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A6FE002BF0DEBD006C4E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A6FE092BF0DEBD006C4E07 /* Spam_SlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9A6FE0A2BF0DEBD006C4E07 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9A6FE132BF0DEBD006C4E07 /* Spam_SlayerUITests.swift in Sources */,
+				F9A6FE152BF0DEBD006C4E07 /* Spam_SlayerUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E204F02BF520CA00029889 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9E204F72BF520CA00029889 /* MessageFilterExtension.swift in Sources */,
+				F9E205072BF52C1800029889 /* modelController.swift in Sources */,
+				F9E205052BF52BEC00029889 /* MaxEntropy2.mlmodel in Sources */,
+				F9E205062BF52BEC00029889 /* MaxEntropy1.mlmodel in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F9A6FE062BF0DEBD006C4E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9A6FDF02BF0DEBC006C4E07 /* Spam Slayer */;
+			targetProxy = F9A6FE052BF0DEBD006C4E07 /* PBXContainerItemProxy */;
+		};
+		F9A6FE102BF0DEBD006C4E07 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9A6FDF02BF0DEBC006C4E07 /* Spam Slayer */;
+			targetProxy = F9A6FE0F2BF0DEBD006C4E07 /* PBXContainerItemProxy */;
+		};
+		F9E204FA2BF520CA00029889 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F9E204F32BF520CA00029889 /* Spam-Slayer-SMS-Filter */;
+			targetProxy = F9E204F92BF520CA00029889 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F9A6FE162BF0DEBD006C4E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F9A6FE172BF0DEBD006C4E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		F9A6FE192BF0DEBD006C4E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Spam Slayer/Spam_Slayer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Spam Slayer/Preview Content\"";
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-Slayer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9A6FE1A2BF0DEBD006C4E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Spam Slayer/Spam_Slayer.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_ASSET_PATHS = "\"Spam Slayer/Preview Content\"";
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-Slayer";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F9A6FE1C2BF0DEBD006C4E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-SlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spam Slayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Spam Slayer";
+			};
+			name = Debug;
+		};
+		F9A6FE1D2BF0DEBD006C4E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-SlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spam Slayer.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Spam Slayer";
+			};
+			name = Release;
+		};
+		F9A6FE1F2BF0DEBD006C4E07 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-SlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spam Slayer";
+			};
+			name = Debug;
+		};
+		F9A6FE202BF0DEBD006C4E07 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MACOSX_DEPLOYMENT_TARGET = 14.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-SlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Spam Slayer";
+			};
+			name = Release;
+		};
+		F9E204FD2BF520CA00029889 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spam-Slayer-SMS-Filter/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Spam-Slayer-SMS-Filter";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-Slayer.Spam-Slayer-SMS-Filter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F9E204FE2BF520CA00029889 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LG57TUQ726;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Spam-Slayer-SMS-Filter/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Spam-Slayer-SMS-Filter";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "am.hexagr.Spam-Slayer.Spam-Slayer-SMS-Filter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F9A6FDEC2BF0DEBB006C4E07 /* Build configuration list for PBXProject "Spam Slayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A6FE162BF0DEBD006C4E07 /* Debug */,
+				F9A6FE172BF0DEBD006C4E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9A6FE182BF0DEBD006C4E07 /* Build configuration list for PBXNativeTarget "Spam Slayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A6FE192BF0DEBD006C4E07 /* Debug */,
+				F9A6FE1A2BF0DEBD006C4E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9A6FE1B2BF0DEBD006C4E07 /* Build configuration list for PBXNativeTarget "Spam SlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A6FE1C2BF0DEBD006C4E07 /* Debug */,
+				F9A6FE1D2BF0DEBD006C4E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9A6FE1E2BF0DEBD006C4E07 /* Build configuration list for PBXNativeTarget "Spam SlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9A6FE1F2BF0DEBD006C4E07 /* Debug */,
+				F9A6FE202BF0DEBD006C4E07 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F9E204FC2BF520CA00029889 /* Build configuration list for PBXNativeTarget "Spam-Slayer-SMS-Filter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F9E204FD2BF520CA00029889 /* Debug */,
+				F9E204FE2BF520CA00029889 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F9F013A12BF0F5BA00136C3D /* XCRemoteSwiftPackageReference "SwiftCSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/swiftcsv/SwiftCSV.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
+		F9F013A82BF33A2000136C3D /* XCRemoteSwiftPackageReference "ThisKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/inkwirehq/ThisKit";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		F9F013AB2BF33CA600136C3D /* XCRemoteSwiftPackageReference "AlertToast" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/elai950/AlertToast";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.9;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F9F013A22BF0F5BA00136C3D /* SwiftCSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9F013A12BF0F5BA00136C3D /* XCRemoteSwiftPackageReference "SwiftCSV" */;
+			productName = SwiftCSV;
+		};
+		F9F013A92BF33A2000136C3D /* ThisKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9F013A82BF33A2000136C3D /* XCRemoteSwiftPackageReference "ThisKit" */;
+			productName = ThisKit;
+		};
+		F9F013AC2BF33CA600136C3D /* AlertToast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F9F013AB2BF33CA600136C3D /* XCRemoteSwiftPackageReference "AlertToast" */;
+			productName = AlertToast;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = F9A6FDE92BF0DEBB006C4E07 /* Project object */;
+}

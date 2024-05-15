@@ -1,0 +1,51 @@
+{
+  "originHash" : "4cb1c70bcc2b3c6cd039dee1b8a8637565b753d01aeb0b5f952f9d1ed4cdac40",
+  "pins" : [
+    {
+      "identity" : "alerttoast",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/elai950/AlertToast",
+      "state" : {
+        "revision" : "b39252eacd159904afd7d718bba0afabb87f2f2f",
+        "version" : "1.3.9"
+      }
+    },
+    {
+      "identity" : "swift-async-algorithms",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-async-algorithms",
+      "state" : {
+        "revision" : "9cfed92b026c524674ed869a4ff2dcfdeedf8a2a",
+        "version" : "0.1.0"
+      }
+    },
+    {
+      "identity" : "swift-collections",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-collections.git",
+      "state" : {
+        "revision" : "94cf62b3ba8d4bed62680a282d4c25f9c63c2efb",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swiftcsv",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/swiftcsv/SwiftCSV.git",
+      "state" : {
+        "revision" : "6ab5d0fe9b6ef3c79d717eefa70862df389e74d9",
+        "version" : "0.10.0"
+      }
+    },
+    {
+      "identity" : "thiskit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/inkwirehq/ThisKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ff1bb346f52ad2fb4f6b5d63782a77932a9661c7"
+      }
+    }
+  ],
+  "version" : 3
+}
